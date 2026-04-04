@@ -1,164 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helbings Apartments Essen | Near Düsseldorf Airport & Messe</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modern Central Apartments Essen - 7 Apartments mit 2 separaten Schlafzimmern. Nur 600m vom Hauptbahnhof. Perfekt für Business, Familien & Messe. Bewertung: 9.0" />
+    <meta name="keywords" content="Apartments Essen, Ferienwohnung Essen, Business Apartments, 2 Schlafzimmer, Südviertel, Messe Essen, Hauptbahnhof, Langzeitaufenthalt" />
+    <meta name="author" content="Modern Central Apartments Essen" />
+    <meta name="robots" content="index, follow" />
     
-    <meta name="description" content="Exklusive 2-Schlafzimmer Apartments in Essen. 20 Min zum Flughafen Düsseldorf (DUS), 5 Min zur Messe. Ideal für Business, Familien & Kliniken (Krupp, Uniklinik).">
-    <meta name="keywords" content="Apartment Essen, Messe Essen, Uniklinikum Essen, Krupp Krankenhaus, Flughafen Düsseldorf, DUS Airport, 2 Schlafzimmer, Accommodation Essen">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Modern Central Apartments Essen | 9.0 Bewertung | 2 Schlafzimmer" />
+    <meta property="og:description" content="7 Apartments in Essen-Südviertel, alle mit 2 separaten Schlafzimmern. Nur 600m zum Hauptbahnhof. Perfekt für Business & Messe." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://helbing-apartments.de" />
     
-    <style>
-        :root {
-            --petroleum: #1E3A3A;
-            --gold: #C9A962;
-            --white: #FAFAF8;
-            --ink: #1a1612;
-            --danger: #b00;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'DM+Sans', sans-serif; background-color: var(--white); color: var(--ink); line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--petroleum); }
-
-        /* Navigation */
-        nav {
-            position: sticky; top: 0; background: white; border-bottom: 1px solid #eee;
-            padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000;
-        }
-        .logo { font-size: 20px; color: var(--gold); font-weight: bold; text-decoration: none; }
-        
-        .lang-nav { display: flex; gap: 8px; flex-wrap: wrap; }
-        .lang-nav a { text-decoration: none; font-size: 11px; color: #666; border: 1px solid #ddd; padding: 2px 6px; border-radius: 4px; }
-        .lang-nav a:hover { border-color: var(--gold); color: var(--gold); }
-
-        /* Hero */
-        .hero {
-            height: 50vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.jpg') center/cover;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px;
-        }
-        .hero h1 { color: white; font-size: 2.8rem; margin-bottom: 10px; }
-        .airport-badge { background: var(--gold); color: white; padding: 8px 20px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; }
-
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-
-        /* Apartment Cards (Airbnb-Style) */
-        .apt-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 50px; display: grid; grid-template-columns: 1.2fr 1fr; }
-        @media (max-width: 850px) { .apt-card { grid-template-columns: 1fr; } }
-
-        .apt-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; padding: 8px; }
-        .apt-gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; transition: 0.3s; }
-        .apt-gallery img.main { grid-column: span 2; height: 350px; }
-
-        .apt-details { padding: 30px; display: flex; flex-direction: column; justify-content: center; }
-        .tag { background: #f0f0f0; padding: 4px 10px; border-radius: 15px; font-size: 11px; margin-right: 5px; color: var(--petroleum); font-weight: bold; }
-        .btn-book { background: var(--gold); color: white; text-decoration: none; text-align: center; padding: 15px; border-radius: 8px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
-        .btn-book:hover { background: var(--petroleum); }
-
-        /* FAQ & Rules */
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
-        @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } }
-        .info-card { background: #fff; padding: 25px; border-radius: 12px; border-top: 4px solid var(--gold); }
-        .danger-list { border-left: 4px solid var(--danger); background: #fff5f5; padding: 15px; margin-top: 10px; list-style: none; }
-
-        footer { background: var(--petroleum); color: white; padding: 50px 5%; margin-top: 80px; }
-    </style>
-</head>
-<body>
-
-<nav>
-    <a href="#" class="logo">HELBINGS APARTMENTS</a>
-    <div class="lang-nav">
-        <a href="#">DE</a><a href="#">EN</a><a href="#">FR</a><a href="#">PL</a><a href="#">RU</a><a href="#">ES</a><a href="#">AR</a><a href="#">IT</a><a href="#">TR</a>
-    </div>
-</nav>
-
-<section class="hero">
-    <h1>Essen: 2 Schlafzimmer. 1 Preis.</h1>
-    <p>Warum zwei Hotelzimmer zahlen, wenn man Privatsphäre haben kann?</p>
-    <div class="airport-badge">✈️ 20 Min. zum FLUGHAFEN DÜSSELDORF (DUS)</div>
-</section>
-
-<div class="container">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231E3A3A'/%3E%3Ctext x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='white'%3EH%3C/text%3E%3C/svg%3E" />
     
-    <div class="apt-card">
-        <div class="apt-gallery">
-            <img src="images/w1_1.jpg" class="main" alt="Apartment 1">
-            <img src="images/w1_2.jpg" alt="Küche">
-            <img src="images/w1_3.jpg" alt="Bad">
-        </div>
-        <div class="apt-details">
-            <div><span class="tag">Erdgeschoss</span><span class="tag">Terrasse</span><span class="tag">6 Stufen</span></div>
-            <h2>Apartment 1 - Business & Family</h2>
-            <p>Voll ausgestattete Küche, 2 getrennte Schlafzimmer und private Terrasse. Perfekt für Langzeitaufenthalte.</p>
-            <a href="https://login.smoobu.com/de/booking/1962421" class="btn-book">Verfügbarkeit prüfen</a>
-        </div>
-    </div>
-
-    <div class="apt-card">
-        <div class="apt-gallery">
-            <img src="images/w4_1.jpg" class="main" alt="Apartment 4">
-            <img src="images/w4_2.jpg" alt="Schlafzimmer">
-            <img src="images/w4_3.jpg" alt="Details">
-        </div>
-        <div class="apt-details">
-            <div><span class="tag">1. Etage</span><span class="tag">Kein Aufzug</span><span class="tag">Smart-TV</span></div>
-            <h2>Apartment 4 - City View</h2>
-            <p>Zentrale Lage, modernes Design. Ideal für Projekt-Teams oder Messe-Besucher.</p>
-            <a href="https://login.smoobu.com/de/booking/1962421" class="btn-book">Verfügbarkeit prüfen</a>
-        </div>
-    </div>
-
-    <div class="info-grid">
-        <div class="info-card">
-            <h3>🚗 Parken (Wichtig!)</h3>
-            <p><strong>Kostenlos:</strong> Parkplatz <strong>Weiglestraße 59</strong> (blaues P-Schild). Schräg gegenüber, linke Seite.</p>
-            <p><strong>Steinstraße:</strong> Gegenüberliegende Seite kostenfrei. Häuserseite kostenpflichtig (10-19 Uhr).</p>
-            <p style="color: var(--danger); font-weight: bold; margin-top: 10px;">⚠️ Achtung: Parkverbot direkt am Haus von 07-09 & 16-19 Uhr (Abschleppgefahr!).</p>
-        </div>
-        <div class="info-card">
-            <h3>🕒 Check-in & Zeiten</h3>
-            <p>Check-in: <strong>Ab 15:00 Uhr</strong> (Code aktiv).</p>
-            <p>Check-out: <strong>Bis 11:00 Uhr</strong> (Code erlischt).</p>
-            <p>Late Check-out / Early Check-in: 10€/Std (nach Absprache 24h vorher).</p>
-        </div>
-    </div>
-
-    <div class="info-card" style="margin-top: 30px;">
-        <h3>🚫 Wichtige Hausregeln (Strafen)</h3>
-        <ul class="danger-list">
-            <li><strong>Partys/Events:</strong> Streng verboten! (500 € Strafe + Verweis).</li>
-            <li><strong>Rauchverbot:</strong> Im gesamten Gebäude (300 € Strafe).</li>
-            <li><strong>Haustiere:</strong> Nur nach Voranmeldung (15€/Nacht). Nicht angemeldet: 150 €.</li>
-        </ul>
-    </div>
-</div>
-
-<footer>
-    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
-        <div>
-            <h4>Impressum</h4>
-            <p>Diary Aziz<br>Helbingstr. 80, 45128 Essen</p>
-            <p>USt-IdNr: DE359025347</p>
-        </div>
-        <div>
-            <h4>Kontakt</h4>
-            <p>Tel: +49 201 72203631</p>
-            <p>Mobil: +49 162 5858585</p>
-        </div>
-        <div>
-            <h4>Lage</h4>
-            <p>✈️ Flughafen DUS: 20 Min.</p>
-            <p>🏟️ Messe Essen: 5 Min.</p>
-            <p>🏥 Klinikum: 8 Min.</p>
-        </div>
-    </div>
-    <div style="text-align: center; margin-top: 40px; font-size: 11px; opacity: 0.6;">
-        &copy; 2026 Helbings Apartments Essen | Bestpreis-Garantie bei Direktbuchung
-    </div>
-</footer>
-
-</body>
+    <title>Modern Central Apartments Essen | 9.0 Bewertung | 2 Schlafzimmer</title>
+    <script type="module" crossorigin src="./assets/index-D2xyXAmU.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Hlpj7X5G.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
